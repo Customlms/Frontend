@@ -5,7 +5,7 @@ const Login:NextPage = () => {
     return(
         <div>
         <h1>Login 화면</h1>
-            <Button href = "/signup">signUp</Button>
+            <Button href = "/find-user">signUp</Button>
         </div>
 
     )

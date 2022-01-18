@@ -1,86 +1,44 @@
-import * as React from 'react';
 import {
-  Button,
-  Checkbox,
-  FormControl,
-  FormControlLabel,
-  FormGroup,
-  FormHelperText,
-  Input,
-  InputLabel,
-  Grid,
-  Container
-} from '@mui/material';
-// const Register = () => {
-//   const [checked, setChecked] = useState(false);
-// }
+    FormControl,
+    Input,
+    InputLabel,
+    FormHelperText,
+    Container,
+    Button
+} from "@mui/material"
 
-// const handleAgree = (event) => {
-//   setChecked(event.target.checked);
-// }
+const signup = () => {
+    return (
+        <div>
+            <Container maxWidth="md">
+                <FormControl variant="outlined" margin="normal" fullWidth>
+                    <InputLabel htmlFor="my-input">아이디</InputLabel>
+                    <Input id="ID" aria-describedby="my-helper-text" />
+                    <FormHelperText id="my-helper-text"></FormHelperText>
+                </FormControl>
 
-const signUp = () => {
-  return (
-    <Container maxWidth="md">
-      <div>
-        <FormGroup>
-          <Grid container spacing={7}>
-            <Grid item xs>
-              <FormControlLabel control={<Checkbox />} label="교수" />
-            </Grid>
-            <Grid item xs>
-              <FormControlLabel control={<Checkbox />} label="직원" />
-            </Grid>
-            <Grid item xs>
-              <FormControlLabel control={<Checkbox />} label="조교" />
-            </Grid>
-            <Grid item xs>
-              <FormControlLabel control={<Checkbox />} label="학부" />
-            </Grid>
-            <Grid item xs>
-              <FormControlLabel control={<Checkbox />} label="대학원" />
-            </Grid>
-          </Grid>
+                <FormControl variant="outlined" margin="normal" fullWidth>
+                    <InputLabel htmlFor="my-input">비밀번호</InputLabel>
+                    <Input id="Password" aria-describedby="my-helper-text" />
+                    <FormHelperText id="my-helper-text"></FormHelperText>
+                </FormControl>
 
-          <FormControl variant="outlined" margin="normal">
-            <InputLabel htmlFor="my-input">성명(한글)</InputLabel>
-            <Input id="Name" aria-describedby="my-helper-text" />
-            <FormHelperText id="my-helper-text"></FormHelperText>
-          </FormControl>
+                <FormControl variant="outlined" margin="normal" fullWidth>
+                    <InputLabel htmlFor="my-input">비밀번호 확인</InputLabel>
+                    <Input id="Password" aria-describedby="my-helper-text" />
+                    <FormHelperText id="my-helper-text"></FormHelperText>
+                </FormControl>
 
-          <FormControl variant="outlined" margin="normal">
-            <InputLabel htmlFor="my-input">생년월일(6자리)</InputLabel>
-            <Input id="Name" aria-describedby="my-helper-text" />
-            <FormHelperText id="my-helper-text"></FormHelperText>
-          </FormControl>
-
-          <FormControl variant="outlined" margin="normal">
-            <InputLabel htmlFor="my-input">입사/입학년도(4자리)</InputLabel>
-            <Input id="Name" aria-describedby="my-helper-text" />
-            <FormHelperText id="my-helper-text"></FormHelperText>
-          </FormControl>
-
-          <FormControl variant="outlined" margin="normal">
-            <Grid container spacing={2}>
-              <Grid item xs>
-                <InputLabel htmlFor="my-input">교직원번호/학번</InputLabel>
-                <Input id="Name" aria-describedby="my-helper-text" />
-                <FormHelperText id="my-helper-text"></FormHelperText>
-              </Grid>
-              <Grid item xs>
-                <Button href = "/signup/signup" variant = "outlined">학번조회</Button>
-              </Grid>
-            </Grid>
-          </FormControl>
-
-
-        </FormGroup>
-
-
-
-      </div>
-    </Container>
-  )
+                <FormControl variant="outlined" margin="normal" fullWidth>
+                    <InputLabel htmlFor="my-input">이메일</InputLabel>
+                    <Input id="Email" aria-describedby="my-helper-text" />
+                    <FormHelperText id="my-helper-text"></FormHelperText>
+                    
+                    <Button>이메일 확인</Button>
+                </FormControl>
+            </Container>
+        </div>
+    )
 }
 
-export default signUp;
+export default signup;
