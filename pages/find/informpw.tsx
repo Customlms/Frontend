@@ -1,13 +1,13 @@
 import Button from '@mui/material/Button';
 
-const findPw = () => {
+const informPw = () => {
     return (
 
-        <div id='findPw' className='findPw'>
+        <div id='pwAlert' className='pwAlert'>
             <h2>님의 비밀번호는 입니다.</h2>
             <Button href="/login">로그인</Button>
         </div>
     )
 }
 
-export default findPw;
+export default informPw;
