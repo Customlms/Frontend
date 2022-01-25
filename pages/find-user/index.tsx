@@ -9,21 +9,21 @@ import {
   Input,
   InputLabel,
   Grid,
-  Container
+  Container,
+  Box,
+  ButtonGroup
 } from '@mui/material';
-// const Register = () => {
-//   const [checked, setChecked] = useState(false);
-// }
-
-// const handleAgree = (event) => {
-//   setChecked(event.target.checked);
-// }
 
 const signUp = () => {
   return (
-    <Container maxWidth="md">
-      <div>
-        <FormGroup>
+    <Container component = "main" maxWidth="md">
+        <Box sx = {{
+          marginTop : 8,
+          display : 'flex',
+          flexDirection : 'column',
+          alignItems : 'center',
+          }}>
+       <FormGroup>
           <Grid container spacing={7}>
             <Grid item xs>
               <FormControlLabel control={<Checkbox />} label="교수" />
@@ -43,42 +43,41 @@ const signUp = () => {
           </Grid>
 
           <FormControl variant="outlined" margin="normal">
-            <InputLabel htmlFor="my-input">성명(한글)</InputLabel>
-            <Input id="Name" aria-describedby="my-helper-text" />
+            <InputLabel htmlFor="name">성명(한글)</InputLabel>
+            <Input id="name" aria-describedby="my-helper-text" />
             <FormHelperText id="my-helper-text"></FormHelperText>
           </FormControl>
 
           <FormControl variant="outlined" margin="normal">
-            <InputLabel htmlFor="my-input">생년월일(6자리)</InputLabel>
-            <Input id="Name" aria-describedby="my-helper-text" />
+            <InputLabel htmlFor="birthDate">생년월일(6자리)</InputLabel>
+            <Input id="birthDate" aria-describedby="my-helper-text" />
             <FormHelperText id="my-helper-text"></FormHelperText>
           </FormControl>
 
           <FormControl variant="outlined" margin="normal">
-            <InputLabel htmlFor="my-input">입사/입학년도(4자리)</InputLabel>
-            <Input id="Name" aria-describedby="my-helper-text" />
+            <InputLabel htmlFor="admissionYear">입사/입학년도(4자리)</InputLabel>
+            <Input id="admissionYear" aria-describedby="my-helper-text" />
             <FormHelperText id="my-helper-text"></FormHelperText>
           </FormControl>
 
           <FormControl variant="outlined" margin="normal">
             <Grid container spacing={2}>
-              <Grid item xs>
-                <InputLabel htmlFor="my-input">교직원번호/학번</InputLabel>
-                <Input id="Name" aria-describedby="my-helper-text" />
+              <Grid item xs={8}>
+                <InputLabel htmlFor="idNumber">교직원번호/학번</InputLabel>
+                <Input id="idNumber" aria-describedby="my-helper-text" />
                 <FormHelperText id="my-helper-text"></FormHelperText>
               </Grid>
-              <Grid item xs>
+              <Grid item xs={4}>
                 <Button href = "/signup" variant = "outlined">학번조회</Button>
               </Grid>
+              <ButtonGroup variant = "contained" sx = {{mt:3}}>
+                <Button >확인</Button>
+                <Button >취소</Button>
+              </ButtonGroup>
             </Grid>
           </FormControl>
-
-
         </FormGroup>
-
-
-
-      </div>
+        </Box>
     </Container>
   )
 }
