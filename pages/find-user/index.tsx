@@ -18,7 +18,7 @@ const signUp = () => {
   return (
     <Container id='signUpForm' className='signUpForm' component="main" maxWidth="md">
       <Box sx={{
-        marginTop: 8,
+        marginTop: 30,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -27,17 +27,9 @@ const signUp = () => {
           <Grid container spacing={7}>
             <Grid item xs>
               <FormControlLabel control={<Checkbox />} label="교수" />
-            </Grid>
-            <Grid item xs>
               <FormControlLabel control={<Checkbox />} label="직원" />
-            </Grid>
-            <Grid item xs>
               <FormControlLabel control={<Checkbox />} label="조교" />
-            </Grid>
-            <Grid item xs>
               <FormControlLabel control={<Checkbox />} label="학부" />
-            </Grid>
-            <Grid item xs>
               <FormControlLabel control={<Checkbox />} label="대학원" />
             </Grid>
           </Grid>
